@@ -1,24 +1,33 @@
 const quest = require('readline-sync');
+const crypto = require('crypto');
 
 function validateOption(userChoice, totalAvailableOptions) {
   return ((parseInt(userChoice) >= 1 && parseInt(userChoice) <= totalAvailableOptions));
 }
+
+function displayOptions(options){
+  for(index=0;index<options.length;index++){
+    console.log(index+1 + ". "+options[index]);
+  }
+}
+
 function hashing() {
 
-  const options = ["1. md5", "2. sha-1", "3. sha-256", "4. sha-512"];
+  const options = ["md5", "sha-1", "sha-256", "sha-512"];
   const hashConversionTypes = {
     '1': 'md5',
     '2': 'sha1',
     '3': 'sha256',
     '4': 'sha512'
   }
-  const crypto = require('crypto');
   const s = quest.question("Enter String \n");
-  let choice = quest.question("Choose the conversion \n" + options.join('\n') + "\n");
-
-  while (!validateOption(choice, 4)) {
+  displayOptions(options);
+  let choice = quest.question("Choose the conversion \n");
+  
+  while (!validateOption(choice, options.length)) {
     console.log("Please select valid option");
-    choice = quest.question("Choose the conversion \n" + options.join('\n') + "\n");
+    displayOptions(options);
+    choice = quest.question("Choose the conversion \n");
   }
 
   let algo = hashConversionTypes[choice];
@@ -30,12 +39,14 @@ function hashing() {
 
 function epoch() {
 
-  const options = ["1. Epoch To HumanDate", "2. HumanDate to Epoch"];
-  choice = quest.question("Choose the conversion \n" + options.join('\n') + "\n");
+  const options = ["Epoch To HumanDate", "HumanDate to Epoch"];
+  displayOptions(options);
+  choice = quest.question("Choose the conversion \n");
 
-  while (!validateOption(choice, 2)) {
+  while (!validateOption(choice, options.length)) {
     console.log("Please select valid option\n");
-    choice = quest.question("Choose the conversion \n" + options.join('\n') + "\n");
+    displayOptions(options);
+    choice = quest.question("Choose the conversion \n");
   }
 
   if (choice === '1') {
@@ -65,14 +76,14 @@ function epoch() {
     let seconds = parseInt(quest.question("Enter seconds\n"));
     let epoch = new Date(year, month, date, hours, minutes, seconds);
     let epochValue = Date.parse(epoch.toString());
-    return ("For " + "'" + year + "/" + month + "/" + date + " " + hours + ":" + minutes + ":" + seconds + ":" + "'" + " Epoch Value is " + epochValue);
+    return ("For " + "'" + year + "/" + month + "/" + date + " " + hours + ":" + minutes + ":" + seconds + "'" + " Epoch Value is " + epochValue);
   }
 
 }
 
 function BinaryDecimalHexOctalConverter() {
 
-  let options = ['1. binary to decimal ', '2. decimal to binary ', '3. binary to hexa', '4. hexa to binary ', '5. binary to octa ', '6. octa to binary ', '7. decimal to hexa ', '8. hexa to decimal ', '9. hexa to octa ', '10. octa to hexa ', '11. decimal to octa', '12. octa to decimal '];
+  let options = ['Binary to decimal ', 'Decimal to binary ', 'Binary to hexa', 'Hexa to binary ', 'Binary to octa ', 'Octa to binary ', 'Decimal to hexa ', 'Hexa to decimal ', 'Hexa to octa ', 'Octa to hexa ', 'Decimal to octa', 'Octa to decimal '];
 
   let conversions = {
     '1': (input) => parseInt(input, 2).toString(10),
@@ -88,11 +99,13 @@ function BinaryDecimalHexOctalConverter() {
     '11': (input) => parseInt(input, 10).toString(8).toUpperCase(),
     '12': (input) => parseInt(input, 8).toString(10),
   }
-  let choice = quest.question("Please select conversion \n" + options.join('\n') + '\n');
+  displayOptions(options);
+  let choice = quest.question("Please select conversion \n");
 
-  while (!validateOption(choice, 12)) {
+  while (!validateOption(choice, options.length)) {
     console.log("Please select valid option");
-    choice = quest.question("Choose the conversion \n" + options.join('\n') + "\n");
+    displayOptions(options);
+    choice = quest.question("Choose the conversion \n");
   }
   let input = quest.question("Enter Value to convert \n");
   let ans = conversions[choice](input);
@@ -135,13 +148,15 @@ function hexToRgb() {
 
 function RgbAndHexConverter() {
   let ans;
-  let options = ['1. Rgb to Hex ', '2. Hex to Rgb'];
-  let choice = quest.question("Select the conversion \n" + options.join('\n') + '\n');
+  let options = ['Rgb to Hex ', 'Hex to Rgb'];
+  displayOptions(options);
+  let choice = quest.question("Select the conversion \n");
 
-  while (!validateOption(choice, 2)) {
+  while (!validateOption(choice, options.length)) {
 
     console.log("Please select valid option");
-    choice = quest.question("Choose the conversion \n" + options.join('\n') + "\n");
+    displayOptions(options);
+    choice = quest.question("Choose the conversion \n");
   }
   switch (choice) {
 
@@ -162,12 +177,14 @@ function unitConverter() {
     '1': (meter) => meter / 1000,
     '2': (kiloMeter) => kiloMeter * 1000
   }
-  const options = ['1. Meter to Kilometer', '2. Kilometer to Meter '];
-  let choice = quest.question("Select the Conversion \n" + options.join('\n') + '\n');
+  const options = ['Meter to Kilometer', 'Kilometer to Meter '];
+  displayOptions(options)
+  let choice = quest.question("Select the Conversion \n");
 
-  while (!validateOption(choice, 2)) {
+  while (!validateOption(choice, options.length)) {
     console.log("Please select valid option");
-    choice = quest.question("Choose the conversion \n" + options.join('\n') + "\n");
+    displayOptions();
+    choice = quest.question("Choose the conversion \n");
   }
 
   let input = quest.question("Enter Value to convert \n");
@@ -176,16 +193,22 @@ function unitConverter() {
   return "Converted Value is " + ans;
 }
 
+
+
 function Utility() {
 
-  const options = ["1. Url Encoding", "2. Url Decoding", "3. Base64 Encoding", "4. Base64 Decoding", "5. Hashing", "6. Epoch And Human Date Conversion", "7. Binary/Decimal/Hex/Octal Conversion", "8. Rgb And Hexa Conversion", "9. Unit Conversion"];
-  let choice = quest.question(options.join("\n") + "\n");
+  const options = ["Url Encoding", "Url Decoding", "Base64 Encoding", "Base64 Decoding", "Hashing", "Epoch And Human Date Conversion", "Binary/Decimal/Hex/Octal Conversion", "Rgb And Hexa Conversion", "Unit Conversion"];
+
+  displayOptions(options);
+  
+  let choice = quest.question();
 
   let ans;
   let str;
 
-  while (!validateOption(choice, 9)) {
+  while (!validateOption(choice, options.length)) {
     console.log("OOPS! Invalid Option.Select valid option \n");
+    displayOptions(options);
     choice = quest.question();
   }
   switch (choice) {
@@ -207,7 +230,7 @@ function Utility() {
       break;
 
     case '4':
-      str = quest.qustion("Enter URL to Decode \n");
+      str = quest.question("Enter URL to Decode \n");
       ans = "The Decoded URL is " + Buffer.from(str, 'base64').toString('ascii') + "\n";
       break;
 
@@ -242,6 +265,7 @@ function welcome() {
 function thankYou() {
   console.log("Thanks for utilising the App. Hope you liked it.");
 }
+
 
 
 welcome();
