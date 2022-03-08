@@ -1,0 +1,14 @@
+
+.navigation{
+    padding: 0px 20px 20px 20px;
+}
+
+#urlEncodeDecodeIn{
+    height : 200px;
+    width : 200px;
+}
+
+#urlEncodeDecodeOut{
+    height : 200px;
+    width : 200px;
+}
