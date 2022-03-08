@@ -204,7 +204,7 @@ function Utility() {
   let choice = quest.question();
 
   let ans;
-  let str;
+  let input;
 
   while (!validateOption(choice, options.length)) {
     console.log("OOPS! Invalid Option.Select valid option \n");
@@ -215,22 +215,22 @@ function Utility() {
 
     case '1':
 
-      str = quest.question("Enter URL to Encode\n");
+      input = quest.question("Enter URL to Encode\n");
       ans = "The Encoded URL is " + encodeURIComponent(str) + "\n";
       break;
 
     case '2':
-      str = quest.question("Enter URL to Decode  \n");
+      input = quest.question("Enter URL to Decode  \n");
       ans = "The Decoded URL is " + decodeURIComponent(str) + "\n";
       break;
 
     case '3':
-      str = quest.question("Enter URL to Encode \n");
+      input = quest.question("Enter URL to Encode \n");
       ans = "The Encoded URL is " + Buffer.from(str).toString('base64') + "\n";
       break;
 
     case '4':
-      str = quest.question("Enter URL to Decode \n");
+      input = quest.question("Enter URL to Decode \n");
       ans = "The Decoded URL is " + Buffer.from(str, 'base64').toString('ascii') + "\n";
       break;
 
