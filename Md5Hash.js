@@ -1,7 +1,6 @@
 
 window.addEventListener("load", () => {
 
-    let crypto = require('crypto');
     let md5Input = document.querySelector("#md5In");
     let md5Button = document.querySelector("#md5Btn");
     let output = document.createElement("textarea");
@@ -13,9 +12,8 @@ window.addEventListener("load", () => {
 
         output.remove();
         let input = md5Input.value;
-        let generatedValue = crypto.createHash(algo).update(s).digest('hex');
+        let generatedValue = CryptoJS.AES.encrypt(input, "md5");
         output.value = generatedValue;
         body.appendChild(output);
-
     })
 })
