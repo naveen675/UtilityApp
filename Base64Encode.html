@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Base64 Encode</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>  
+    <script src="Base64Encode.js" defer></script>  
 </head>
 <body>
     <div class="main-head">
@@ -18,12 +18,17 @@
             </select>
         </nav>
     </div> 
-    <h1>Base64 Encode</h1>
-    <h4>Encode a string as Base64</h4>
-    <div class="encoding">
-        <input type="text" class="t1"><br>
-        <button class="t2">Base64 Encode</button><br>
-        <input type="text" id="base64EncodeOut">
+    
+    <div class="content">
+        <div class="heading">
+            <h1>Base64 Encode</h1>
+            <h4>Encode a string as Base64</h4>
+        </div>
+        <div class="encoding">
+            <textarea id="base64EncodIn"></textarea><br>
+            <input type="button" id="base64EncodeBtn" value="Encode"><br>
+            <input type="text" id="base64EncodeOut">
+        </div>
     </div>
   
 </body>
