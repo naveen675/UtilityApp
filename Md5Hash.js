@@ -5,7 +5,7 @@ window.addEventListener("load", () => {
     let md5Button = document.querySelector("#md5Btn");
     let output = document.createElement("textarea");
     let body = document.querySelector(".conversion");
-    output.setAttribute("id","md5InOut");
+    output.setAttribute("id","md5Out");
 
 
     md5Button.addEventListener("click", () => {
