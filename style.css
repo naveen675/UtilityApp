@@ -5,19 +5,33 @@
 
 }
 
+.bodyContent{
+    background-color:#f6f8fa;
+}
+
 .content{
     background-color: #f6f8fa;
+
+}
+
+.content a:link{
+
+    text-decoration: none;
 }
 
 div.item{
-
     display : block;
+    border-radius: 10px;
     background-color:rgb(187, 187, 247);
     margin : 1em;
     width : 6em;
     height : 2em;
     padding : 1em;
     align-content: center;
+}
+
+.item a{
+    color:black;
 }
 
 [class*="Converter"]{
@@ -28,6 +42,57 @@ div.item{
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+.navigation .dropdown-content{
+
+    display : none;
+    position:absolute;
+}
+
+.dropdown:hover .dropdown-content{
+
+    
+    display : block;
+    background-color: #f6f8fa;
+}
+
+.navigation{
+
+    display : flex;
+    background-color: white;
+    flex-wrap: wrap;
+    border-bottom: 1px solid;
+    margin : 5px;
+
+}
+.navigation a:link{
+
+    text-decoration : none;
+}
+.dropbtn{
+
+
+    margin : 2px;
+    padding : 2px;
+}
+
+.options{
+
+    display : block;  
+    color: black; 
+    padding : 2px;
+    margin : 2px;
+}
+
+.options:hover {
+    background-color : #ddd9d9; 
+    padding : 2px;
+    border : 1px solid;
+    
+}
+
+
+
 
 
 
