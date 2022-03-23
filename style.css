@@ -1,14 +1,36 @@
 
-.navigation{
-    padding: 0px 20px 20px 20px;
+.subHead{
+    padding : 1em;
+    margin : 1px;
+
 }
 
-#urlEncodeDecodeIn{
-    height : 200px;
-    width : 200px;
+.content{
+    background-color: #f6f8fa;
 }
 
-#urlEncodeDecodeOut{
-    height : 200px;
-    width : 200px;
+div.item{
+
+    display : block;
+    background-color:rgb(187, 187, 247);
+    margin : 1em;
+    width : 6em;
+    height : 2em;
+    padding : 1em;
+    align-content: center;
 }
+
+[class*="Converter"]{
+   
+    display : flex;
+    background-color: #f6f8fa;
+    max-width: 100em;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
