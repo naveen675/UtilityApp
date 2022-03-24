@@ -24,6 +24,11 @@ div.item{
     align-content: center;
 }
 
+div.item:hover{
+
+    font-size: 110%;
+}
+
 .item a{
     color:black;
 }
