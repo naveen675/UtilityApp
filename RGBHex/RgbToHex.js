@@ -13,6 +13,7 @@ window.addEventListener("load",() => {
     p2.setAttribute("id","hexValue");
     let color = document.createElement("input");
     color.setAttribute("type","button");
+    color.setAttribute("id","rgbToHexColorBox");
 
 
     RgbToHexButton.addEventListener("click" ,() => {
@@ -20,13 +21,15 @@ window.addEventListener("load",() => {
         let red = redValue.value;
         let green = greenValue.value;
         let blue = blueValue.value;
-        if(!(red >= 0 && red <= 255)){
+
+        if(!(red)){
             red = 255;
         }
-        if(!(green >= 0 && green<= 255)){
+        
+        if(!(green)){
             green = 255;
         }
-        if(!(blue >= 0 && blue<= 255)){
+        if(!(blue)){
             blue = 255;
         }
         let hexValue = "#" + parseInt(red).toString(16)+parseInt(green).toString(16)+parseInt(blue).toString(16);

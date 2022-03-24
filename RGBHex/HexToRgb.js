@@ -7,7 +7,14 @@ window.addEventListener("load", () => {
     let body = document.querySelector(".subContent");
     let p1 = document.createElement("p");
     let p2 = document.createElement("p");
-
+    let div = document.createElement("div");
+    div.setAttribute("id","rgbToHexColor")
+    let redBtn = document.createElement("h3");
+    redBtn.setAttribute("id", "redBtn");
+    let grnBtn = document.createElement("h3");
+    grnBtn.setAttribute("id","grnBtn");
+    let blBtn = document.createElement("h3");
+    blBtn.setAttribute("id","blBtn");
 
     
     HexButton.addEventListener("click", () => {
@@ -35,8 +42,18 @@ window.addEventListener("load", () => {
         p1.innerHTML = "Hex Code #"+HexInput.value+" Converts to";
         output.appendChild(p1);
         p2.innerHTML = "rgb("+ rgbValues["Red"]+","+rgbValues["Green"]+","+rgbValues["Blue"]+")";
+        redBtn.innerHTML =rgbValues["Red"];
+        redBtn.style.color = "red"
+        div.appendChild(redBtn);
+        grnBtn.innerHTML = rgbValues["Green"];
+        grnBtn.style.color = "green";
+        div.appendChild(grnBtn);
+        blBtn.innerHTML = rgbValues["Blue"];
+        blBtn.style.color = "blue";
+        div.appendChild(blBtn);
         output.appendChild(p2);
         body.appendChild(output);
+        body.appendChild(div);
 
         
 
