@@ -4,11 +4,6 @@
     margin : 1px;
 }
 
-.bodyContent{
-    margin-top : -2%;
-    background-color:#f6f8fa;
-}
-
 .content{
     background-color: #f6f8fa;
 
@@ -92,3 +87,4 @@ div.item{
     border : 1px solid;
     
 }
+
