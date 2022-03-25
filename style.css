@@ -114,5 +114,9 @@ input[type="button"]:hover{
     width : 2em;
 }
 
+.RGBUserInput{
+    display : flex;
+    flex-wrap: wrap;
+}
 
 

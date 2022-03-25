@@ -7,8 +7,10 @@ window.addEventListener("load", () => {
     output.setAttribute("id","epochOut");
     conversionButton.addEventListener("click",() => {
 
-        let input = epochInput.value;
-        let date = new Date(parseInt(input));
+        let input = parseInt(epochInput.value);
+        console.log(input);
+        let date = new Date(input);
+        console.log(date);
         output.innerHTML = date.getFullYear()+":"+date.getMonth()+":"+date.getDay()+":"+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
         body.appendChild(output);
     })
