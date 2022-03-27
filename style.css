@@ -61,6 +61,17 @@ div.item:hover{
     background-color: #f6f8fa;
 }
 
+@media screen and (max-width:1080px) {
+
+    .navigation{
+    
+        display : flex;
+        flex-direction:column;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        width : -50%;
+    }
+}
 .navigation{
     
     display : flex;
