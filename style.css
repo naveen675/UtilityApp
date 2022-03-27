@@ -30,8 +30,8 @@ div.item{
 }
 
 div.item:hover{
-    padding : 0.5em;
-    font-size: 101%;
+    padding : 1em;
+    font-size: 90%;
 }
 
 .item a{
