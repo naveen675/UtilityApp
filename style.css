@@ -61,7 +61,7 @@ div.item:hover{
     background-color: #f6f8fa;
 }
 
-@media screen and (max-width:1080px) {
+@media screen and (max-width:450px) {
 
     .navigation{
     
