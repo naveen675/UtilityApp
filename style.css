@@ -44,6 +44,10 @@ div.item:hover{
     flex-wrap: wrap;
 }
 
+#HomeImg{
+    height : 2.5em;
+    width : 2.5em;
+}
 .navigation .dropdown-content{
 
     display : none;
@@ -58,15 +62,24 @@ div.item:hover{
 }
 
 .navigation{
-
+    
     display : flex;
-    flex-direction: column;
     justify-content: flex-end;
-    background-color: white;
     flex-wrap: wrap;
-    border-bottom: 1px solid;
-    margin : 5px;
+    width : -50%;
+}
 
+.nav{
+    display : flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+
+
+.nav{
+    background-color: white; 
 }
 .navigation a:link{
 
@@ -87,7 +100,6 @@ div.item:hover{
     margin : 2px;
 
 }
-
 .options:hover {
     background-color : #ddd9d9; 
     padding : 2px;
