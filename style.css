@@ -60,6 +60,7 @@ div.item:hover{
 .navigation{
 
     display : flex;
+    flex-direction: column;
     justify-content: flex-end;
     background-color: white;
     flex-wrap: wrap;
@@ -113,10 +114,3 @@ input[type="button"]:hover{
     height: 2em;
     width : 2em;
 }
-
-.RGBUserInput{
-    display : flex;
-    flex-wrap: wrap;
-}
-
-
