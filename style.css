@@ -6,6 +6,9 @@ body{
     padding : 1em;
     margin : 1px;
 }
+.content{
+    text-align : center;
+}
 .content a:link{
 
     text-decoration: none;
