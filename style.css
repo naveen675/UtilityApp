@@ -30,7 +30,7 @@ div.item{
 }
 
 div.item:hover{
-    padding : 1em;
+    
     font-size: 90%;
 }
 
