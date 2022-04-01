@@ -7,6 +7,7 @@
     <title>Epoch To Unix</title>
     <link rel="stylesheet" href="../style.css">
     <script src="EpochToUnix.js" defer></script>
+    <script src="LiveEpoch.js" defer></script>
 </head>
 <body>
     <div class="nav">
@@ -73,6 +74,10 @@
         <div class="heading">
             <h1>Epoch to Unix Timestamp</h1>
             <p>Converts Epoch Value to Human readable date</p>
+        </div>
+        <div class="epochlive" style="display: inline;">
+            Current Unix Epoch Time is
+            <div id="ticker">0</div>
         </div>
         <div class="subContent">
             EpochValue : <input type="text" id="EpochIn" placeholder="00000000"><br>

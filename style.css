@@ -13,7 +13,9 @@ body{
 
     text-decoration: none;
 }
-
+.subContent{
+    margin-top: 1em;
+}
 #home{
     align-items: flex-start;
 }
@@ -147,4 +149,23 @@ a{
 
 .footer{
     text-align: end;
+}
+
+
+#ticker{
+    
+    background-color: #ddd9d9;
+    display: inline;
+    margin-top:-100%;
+    margin-bottom: 10%;
+    padding:0.5em;
+    text-align:center;
+    border-radius: 0.5em;
+
+}
+#ticker:hover{
+    background-color : rgb(199, 241, 136);
+}
+.epochlive{
+    display : inline;
 }
