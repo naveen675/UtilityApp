@@ -76,6 +76,12 @@ div.item:hover{
         flex-wrap: wrap;
         width : -50%;
     }
+    .navigation .dropdown-content{
+
+        display : none;
+        top : 50px;
+        right :110px;
+    }
 }
 .navigation{
     
@@ -154,7 +160,7 @@ a{
 
 #ticker{
     
-    background-color: #cecaca;
+    background-color: rgb(199, 241, 136);
     display: inline;
     margin-top:-100%;
     margin-bottom: 10%;
