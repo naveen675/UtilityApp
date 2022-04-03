@@ -25,15 +25,18 @@ div.item{
     border-radius: 10px;
     background-color:rgb(187, 187, 247);
     margin : 1em;
-    width : 6em;
-    height : 2em;
+    min-width : 6em;
+    min-height : 2em;
     padding : 1em;
     align-content: center;
 }
 
 div.item:hover{
     
-    font-size: 90%;
+    min-width : 6em;
+    min-height : 2em;
+    font-size:90%;
+    
 }
 
 .item a{
