@@ -27,15 +27,16 @@ div.item{
     margin : 1em;
     min-width : 6em;
     min-height : 2em;
+    max-width : 6em;
+    max-height : 2em;
     padding : 1em;
     align-content: center;
 }
 
 div.item:hover{
     
-    min-width : 6em;
-    min-height : 2em;
-    font-size:90%;
+    
+    font-size:98%;
     
 }
 
@@ -81,9 +82,13 @@ div.item:hover{
     }
     .navigation .dropdown-content{
 
-        display : none;
-        top : 50px;
-        right :110px;
+        min-width : 6em;
+        min-height : 2em;
+        max-width : 6em;
+        max-height : 2em;
+        padding : 1em;
+        top : 5em;
+        right : 6em;
     }
 }
 .navigation{
@@ -92,20 +97,28 @@ div.item:hover{
     justify-content: flex-end;
     flex-wrap: wrap;
     width : -50%;
+
+}
+.dropbtn{
+    border : 0;
 }
 
 .nav{
     display : flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-}
-
-
-
-.nav{
+    margin-top: -1%;
+    margin-bottom: -2%;
+    height: 20%;
     background-color: white; 
+    box-shadow: 0px 4px #888888;
+
 }
+.dropdown .dropbtn{
+    height: 100%;
+}
+
+
 .navigation a:link{
 
     text-decoration : none;
@@ -121,14 +134,13 @@ div.item:hover{
 
     display : block;  
     color: black; 
-    padding : 2px;
-    margin : 2px;
+    
 
 }
 .options:hover {
     background-color : #ddd9d9; 
-    padding : 2px;
-    border : 1px solid;
+    border : 0px solid;
+
     
 }
 
